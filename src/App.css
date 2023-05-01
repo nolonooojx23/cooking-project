@@ -1,0 +1,478 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgrey;
+}
+
+
+
+.navbar {
+  width: 100%;
+  padding: 20px 120px;
+  background-color: rgb(0, 250, 175);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  transition: all .3s ease;
+}
+
+.navbar button {
+  padding: 8px 15px;
+  background: transparent;
+  border: 2px solid white;
+  font-size: 20px;
+  color: white;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.navbar button:hover {
+  transform: scale(1.1);
+}
+
+.link {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+.nightMode {
+  width: 100%;
+  padding: 20px 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.changeThems {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.changeThems div {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: red;
+}
+
+.changeThems div:nth-child(2) {
+  background-color: purple;
+}
+
+.changeThems div:nth-child(3) {
+  background-color: orange;
+}
+
+.changeThems div:nth-child(4) {
+  background-color: lime;
+}
+
+
+.create {
+  width: 100%;
+  padding: 20px 120px;
+  justify-content: center;
+  display: flex;
+}
+
+.create_box {
+  width: 500px;
+  padding: 20px;
+  color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.create_box button {
+  padding: 15px;
+  background-color: purple;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+form p {
+  font-size: 20px;
+  color: grey;
+  margin-top: 20px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form input {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+}
+
+.input_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.input_btn input {
+  margin-top: 0;
+}
+
+.input_btn button {
+  padding: 15px;
+  background-color: purple;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.home {
+  width: 100%;
+  padding: 20px 120px;
+}
+
+.home_boxs {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+.home_box {
+  width: 350px;
+  height: 270px;
+  background-color: white;
+  box-shadow: 0 0 15px grey;
+  border-radius: 10px;
+  padding: 20px;
+  color: grey;
+  transition: all .3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.home_box:hover {
+  filter: drop-shadow(0 0 2em rgb(0, 250, 175));
+  transform: translateY(-5px) translateX(5px);
+}
+
+.home_box:hover .home_btn button {
+  animation: mymove 1.5s linear infinite;
+}
+
+/*! box animation */
+
+ .home_box:hover .home_bg{
+  width: 600px;
+  height: 600px;
+}
+
+.home_bg{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  display: block;
+  border-radius: 50%;
+  transition: all .8s ease;
+  height: 0;
+  width: 0;
+  transform: translate(-50%, -50%);
+  background: rgb(0, 250, 175);
+  z-index: -1;
+} 
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home_box h1 {
+  font-size: 25px;
+}
+
+.home_box p {
+  margin-top: 10px;
+}
+
+.del {
+  cursor: pointer;
+}
+
+.home_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_btn button {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-image: linear-gradient(royalblue, royalblue);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-color: coral;
+  transition: .5s, color .5s;
+}
+
+.home_btn button:hover {
+  background-size: 100% 100%;
+  color: #fff;
+  filter: drop-shadow( 0 0 2em royalblue);
+}
+
+@keyframes mymove {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+.recipe {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipe_box {
+  width: 800px;
+  min-height: 300px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 15px grey;
+  border-radius: 10px;
+}
+
+.recipe_box h1 {
+  margin-bottom: 10px;
+}
+
+.recipe_box p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.link{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.btn-donate {
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: hsla(194 100% 69% / 1);
+  --btn-bg-2: hsla(217 100% 56% / 1);
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5em;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+}
+
+.btn-donate:hover {
+  background-position: right top;
+}
+
+.btn-donate:is(:focus, :focus-within,:active) {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+}
+
+
+
+.method{
+  padding: 5px;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.App-dark{
+  min-height: 100vh;
+  background-color: #242424;
+  transition: all .3s ease;
+}
+.App-dark .navbar{
+  background-color: lime;
+}
+.App-dark .create_box{
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+}
+
+.App-dark .home_box{
+  background-color: black;
+  box-shadow:  0 0 0;
+  color: white;
+}
+.App-dark .home_box:hover {
+  filter: drop-shadow(0 0 2em lime);
+}
+
+.App-dark .home_bg{
+  background-color: rgb(1, 218, 1);
+}
+
+.App-dark .home_btn button{
+  background-color: red;
+  color: white;
+}
+
+.App-dark .recipe_box{
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 0;
+}
+
+.App-dark .btn-donate{
+  --btn-bg-1: rgb(7, 150, 7);
+  --btn-bg-2: lime;
+  box-shadow: 0 0 15px lime;
+}
+
+/* Dark Mode Only ;) */
+
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: .5em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #5B5B5B;
+  transition: .4s;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.slider .circle {
+  background-color: #212121;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+  transition: .4s;
+}
+
+.slider .circle::before {
+  position: absolute;
+  content: "";
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(182, 182, 182);
+  transition: .4s;
+}
+
+.slider .circle::after {
+  content: '';
+  background-color: #212121;
+  height: 1.7em;
+  width: 1.7em;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .4s;
+}
+
+.error{
+  width: 400px;
+  height: 400px;
+}
+
+input:checked + .slider .circle {
+  transform: translateX(2em);
+  transition: .4s;
+}
+
+input:checked + .slider .circle::before {
+  background-color: #e1e1e1;
+  transition: .4s;
+}
+
+input:checked + .slider .circle::after {
+  width: 0;
+  height: 0;
+  transition: .4s;
+} 
